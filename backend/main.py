@@ -12,17 +12,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# @app.post("/files/")
-# async def create_file(file: Annotated[bytes, File()]):
-#     return {"file_size": len(file)}
-
 @app.get("/")
 async def health():
     return "ok"
 
 @app.get("/data")
 async def get_data():
-    return "{}"
+    return {
+            "example_data": [
+                "data", "goes", "here"
+                ]
+            }
 
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile):
