@@ -26,6 +26,12 @@ export default {
 
 <template>
 <div>
-	<CanvasJSChart :options="options"/>
+	<CanvasJSChart :options="options" class="custom"/>
 </div>
 </template>
+
+<style>
+	.custom{
+		background: green;
+	}
+</style>
