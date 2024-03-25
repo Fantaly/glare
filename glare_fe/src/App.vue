@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import CanvasJSvan from '@canvasjs/charts';
-import { RouterLink, RouterView } from 'vue-router'
-
-
-//Render Chart
-chart.render();
 </script>
 
 <template>
