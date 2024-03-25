@@ -26,19 +26,23 @@ const tabs = ref([
 	{ title: 'Tab 3', content: 'Tab 3 Content' }
 ]);
 
+import GraficoLines from '@/components/grafico_lines.vue'
+import GraficoWhisker from '@/components/grafico_whisker.vue'
 </script>
 
 <template>
-	<div>
+	<div class="flex flex-col gap-8 h-[100vh]">
 		<Navbar />
-		<!-- <TabView>
-			<TabPanel v-for="tab in tabs" :key="tab.title" :header="tab.title">
-				<div class="content">
-					Content here
-				</div>
-			</TabPanel>
-		</TabView> -->
-		<!-- <CanvasJSChart :options="options" class="custom" /> -->
+
+		<main class="p-10">
+			<div class="p-10 border rounded-xl">
+				<GraficoLines />
+			</div>
+			<div>
+				<GraficoWhisker />
+			</div>
+		</main>
+
 	</div>
 </template>
 
