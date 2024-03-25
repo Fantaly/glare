@@ -1,2 +1,2 @@
 # glare
-Team Glare Sonico
+Questo è il team Glare

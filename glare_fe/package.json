@@ -17,6 +17,8 @@
     "@canvasjs/stockcharts": "^1.7.45",
     "@canvasjs/vue-charts": "^1.0.4",
     "pinia": "^2.1.7",
+    "primevue": "^3.50.0",
+    "sass": "^1.72.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
