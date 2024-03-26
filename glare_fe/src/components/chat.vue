@@ -1,29 +1,49 @@
 <template>
-    <div class="chat">
-        <div class="message">
+    <div class="chat">        
+        <div class="column">
+            <div>Chat with me</div>
+            <div class="message" v-if="!loading && sended">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <Skeleton height="2rem" class="mb-2" v-if="loading"></Skeleton>
         </div>
+        
         <footer>
-            <form action="">
-                <input type="text" class="custom-input" placeholder="Ask me anything">
+            <form @submit.prevent="handleLoading">
+                <input v-model="value" type="text" class="custom-input" placeholder="Ask me anything">
             </form>
         </footer>
+
     </div>
 </template>
 
 <script setup lang="ts">
-
-import InputText from 'primevue/inputtext';
-import { useFilterStore } from '../stores/filters'
-import FloatLabel from 'primevue/floatlabel';
-
+import Skeleton from 'primevue/skeleton';
 
 import {ref } from 'vue';
 
-const value = ref()
+const loading = ref(false)
+const sended = ref(false)
+const value = ref("")
+
+function handleLoading(){
+    value.value = ""
+    loading.value = true
+    setTimeout(function(){
+        sended.value = true
+        loading.value = false
+}, 2000);
+}
+
 </script>
 
 <style scoped>
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 
 .chat{
     width: 400px;
@@ -52,7 +72,6 @@ footer{
 }
 
 .message{
-    padding: 16px;
     border-radius: 16px;
     font-weight: 500;
 }

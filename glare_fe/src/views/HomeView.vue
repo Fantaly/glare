@@ -1,9 +1,21 @@
-<script setup lang="ts">
+<script setup>
 import Navbar from '@/components/navbar.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import Chat from '@/components/chat.vue'
 import GraficoLines from '@/components/grafico_lines.vue'
 import GraficoWhisker from '@/components/grafico_whisker.vue'
+import string_structure_category from '../assets/string_structure_category.json'
+
+
+async function handleData(){
+	const response = await fetch('string_structure.json')
+	const data = await response.json();
+	console.log(data)
+}
+
+onMounted(() => {
+	handleData()
+})
 </script>
 
 <template>
@@ -32,12 +44,16 @@ import GraficoWhisker from '@/components/grafico_whisker.vue'
 .graph{
 	display: flex;
 	gap: 32px;
-	justify-content: center
+	justify-content: center;
+	padding: 24px;
+	/* border: 1px solid rgb(240, 240, 240);
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 main{
 	/* p-10 mx-[200px] flex flex-col gap-10 */
-	padding: 10rem;
-	margin: 0px 150%;
+	padding: 5rem;
+	margin: 0px 50px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
