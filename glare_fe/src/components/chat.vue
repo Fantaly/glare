@@ -1,9 +1,11 @@
 <template>
     <div class="chat">        
         <div class="column">
-            <div>Chat with me</div>
+            <div>
+Gli integratori alimentari relativi all'ansia potranno aver eun grande incremento nei prossimi 12 mesi
+</div>
             <div class="message" v-if="!loading && sended">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Si, possiamo notare che gli integratori relativi al benessere inizialmente crescenranno, ma poi tenderanno a decrescere
             </div>
             <Skeleton height="2rem" class="mb-2" v-if="loading"></Skeleton>
         </div>
@@ -18,6 +20,8 @@
 </template>
 
 <script setup lang="ts">
+//domanda:
+// esiste qualche trend decresente?
 import Skeleton from 'primevue/skeleton';
 
 import {ref } from 'vue';

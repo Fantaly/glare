@@ -4,16 +4,17 @@
 
 <script setup lang="ts">
 
+
 const options = {
 	animationEnabled: true,
 	title:{
-		text: "Daily Sleep Statistics of Age Group 12 - 20"
+		text: "Intervalli di confidenza"
 	},
 	axisX: {
 		valueFormatString: "DDD"
 	},
 	axisY: {
-		title: "Sleep Time (in Hours)",
+		title: "Confidence",
 		includeZero: true
 	},
 	data: [{

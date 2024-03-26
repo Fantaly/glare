@@ -6,11 +6,37 @@
 import { ref, onMounted } from "vue";
 import Chart from 'primevue/chart';
 
+
+function generateData(name){
+  return {
+		type: "line",
+		showInLegend: true,
+		name: name,
+		xValueFormatString: "DD MMM, YYYY",
+		dataPoints: [
+			{ x: new Date(2017, 0, 3), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 4), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 5), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 6), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 7), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 8), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 9), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 10), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 11), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 12), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 13), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 14), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 15), y: 500 + Math.random()*100 },
+			{ x: new Date(2017, 0, 16), y: 500 + Math.random()*100 }
+		]
+  }
+}
+
 const options = {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Site Traffic"
+		text: "Previsione"
 	},
 	axisX:{
         title: "Index",
@@ -36,13 +62,17 @@ const options = {
 		horizontalAlign: "left",
 		dockInsidePlotArea: true
 	},
-	data: [{
+	data: [
+    generateData("sonno"),
+    generateData("stmaco"),
+    generateData("mestruazioni"),
+    generateData("probiotici"),
+  {
 		type: "line",
 		showInLegend: true,
-		name: "Total Visit",
+		name: "ansia",
 		markerType: "square",
 		xValueFormatString: "DD MMM, YYYY",
-		color: "#F08080",
 		dataPoints: [
 			{ x: new Date(2017, 0, 3), y: 650 },
 			{ x: new Date(2017, 0, 4), y: 700 },
@@ -63,7 +93,7 @@ const options = {
 	{
 		type: "line",
 		showInLegend: true,
-		name: "Unique Visit",
+		name: "benessere",
 		lineDashType: "dash",
 		dataPoints: [
 			{ x: new Date(2017, 0, 3), y: 510 },
