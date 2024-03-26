@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class=" toolbar-item">
                         <label for="category" class="font-medium text-sm">Select category</label>
-                        <Dropdown id="category" v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="width" />
+                        <Dropdown id="category" v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select category" class="width" />
                     </div>
                     <div class="toolbar-item">
                         <label for="category" class="font-medium text-sm">From date</label>
@@ -34,13 +34,14 @@ import { ref } from 'vue';
 const filters = useFilterStore()
 
 const selectedCity = ref(null);
+
 const cities = ref([
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
+    { name: 'Area terapeutica', code: 'NY' },
+    { name: 'Composto', code: 'RM' },
+    { name: 'Metodo di somministrazione', code: 'LDN' }
 ]);
+
+
 </script>
 
 <style scoped lang="scss">

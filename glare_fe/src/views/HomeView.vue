@@ -7,15 +7,15 @@ import GraficoWhisker from '@/components/grafico_whisker.vue'
 import string_structure_category from '../assets/string_structure_category.json'
 
 
-async function handleData(){
-	const response = await fetch('string_structure.json')
-	const data = await response.json();
-	console.log(data)
-}
+// async function handleData(){
+// 	const response = await fetch('string_structure.json')
+// 	const data = await response.json();
+// 	console.log(data)
+// }
 
-onMounted(() => {
-	handleData()
-})
+// onMounted(() => {
+// 	handleData()
+// })
 </script>
 
 <template>
