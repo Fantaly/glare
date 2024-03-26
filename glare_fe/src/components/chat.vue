@@ -2,7 +2,8 @@
     <div class="chat">        
         <div class="column">
             <div>
-Gli integratori alimentari relativi all'ansia potranno aver eun grande incremento nei prossimi 12 mesi
+Questi dati indicano che gli integratori alimentari relativi 
+ all'ansia potranno aver eun grande incremento nei prossimi 12 mesi
 </div>
             <div class="message" v-if="!loading && sended">
 Si, possiamo notare che gli integratori relativi al benessere inizialmente crescenranno, ma poi tenderanno a decrescere

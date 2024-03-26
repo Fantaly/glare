@@ -11,7 +11,7 @@ const options = {
 		text: "Intervalli di confidenza"
 	},
 	axisX: {
-		valueFormatString: "DDD"
+		valueFormatString: "aaa"
 	},
 	axisY: {
 		title: "Confidence",
