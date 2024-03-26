@@ -1,5 +1,5 @@
 <template>
-        <Chart type="line" :data="chartData" :options="chartOptions" class="h-300rem" />
+        <Chart type="line" :data="chartData" :options="chartOptions" class="grafico" />
 </template>
 
 <script setup>
@@ -74,3 +74,9 @@ const setChartOptions = () => {
     };
 }
 </script>
+
+<style>
+.grafico{
+    
+}
+</style>

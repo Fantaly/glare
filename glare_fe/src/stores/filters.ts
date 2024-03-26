@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia';
 
-export const usecounterStore = defineStore('counter', {
+export const useFilterStore = defineStore('filters', {
   state: () => ({
-    category: ,
+    category: '',
     startDate: '',
     endDate: '',
     categories: ['Electronics', 'Clothing', 'Books', 'Home', 'Beauty', 'Sports', 'Toys', 'Food', 'Other'],
+    chat: []
   }),
   getters: {
     getCategories(): Array<string> {
@@ -13,6 +14,8 @@ export const usecounterStore = defineStore('counter', {
     }
   },
   actions: {
-    
+    pushMessage(message: string){
+      this.chat.push(message)
+    }
   },
 });
